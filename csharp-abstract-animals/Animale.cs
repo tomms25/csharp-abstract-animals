@@ -40,7 +40,7 @@ namespace csharp_abstract_animals
     {
         public override void Mangia()
         {
-            Console.WriteLine("Mangia croccantini");
+            Console.WriteLine("Mangio cibo per cani");
         }
 
         public override void Verso()
@@ -53,7 +53,7 @@ namespace csharp_abstract_animals
     {
         public override void Mangia()
         {
-            Console.WriteLine("Mangia semi");
+            Console.WriteLine("Mangio semi");
         }
 
         public override void Verso()
@@ -63,7 +63,66 @@ namespace csharp_abstract_animals
 
         public void Vola()
         {
-            Console.WriteLine("Sto Volando!");
+            Console.WriteLine("Volo");
+        }
+    }
+
+    public class Aquila : Animale, IVolante
+    {
+        public override void Mangia()
+        {
+            Console.WriteLine("Mangio animali piccoli");
+        }
+
+        public override void Verso()
+        {
+            Console.WriteLine("Grido");
+        }
+
+        public void Vola()
+        {
+            Console.WriteLine("Volo");
+        }
+    }
+
+    public class Delfino : Animale, INuotante
+    {
+        public override void Mangia()
+        {
+            Console.WriteLine("Mangia pesce");
+        }
+
+        public void Nuota()
+        {
+            Console.WriteLine("Nuoto");
+        }
+
+        public override void Verso()
+        {
+            Console.WriteLine("Vocalizzo");
+        }
+    }
+
+    public class Anatra : Animale, INuotante, IVolante
+    {
+        public override void Mangia()
+        {
+            Console.WriteLine("Mangia pesce");
+        }
+
+        public override void Verso()
+        {
+            Console.WriteLine("Starnazza");
+        }
+
+        public void Nuota()
+        {
+            Console.WriteLine("Nuoto");
+        }
+
+        public void Vola()
+        {
+            Console.WriteLine("Volo");
         }
     }
 }
